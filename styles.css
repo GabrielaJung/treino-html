@@ -1,3 +1,31 @@
+
+/* definição de variáveis */
+:root{
+
+    --border-radius: 5rem;
+    --box-shadow: 0.05rem 0.05rem 0.25rem -0.1rem var(--secondary-color);
+
+    --background:#f2f2f2;
+
+    --color: #111;
+    --color-shadow: #666;
+    --secondary-color: #323232;
+
+    --blue:#333faa;
+
+}
+
+.dark-mode:root{
+
+    --background:#111;
+
+    --color: #f2f2f2;
+    --color-shadow: #888;
+    --secondary-color: #444;
+
+    --blue:#a7c3ff;
+}
+
 *{
     font-family: 'Poppins', sans-serif;
 }
@@ -17,6 +45,7 @@ header{
 
 .logo{
     font-size: 2rem;
+    color: var(--secondary-color);
 }
 
 /* .nav{
@@ -28,22 +57,21 @@ header{
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    /* trocar para variável */
-    background: #fff;
+    background: var(--background);
     padding: 1.5rem 3rem 1.5rem 3rem;
     border-radius: 5rem;
+    box-shadow: var(--box-shadow) ;
+
 }
 
 .nav-item, .nav-item > a{
     text-decoration: none;
     list-style: none;
-    /* trocar para variável */
-    color: #444;
+    color: var(--color);
 }
 
 .nav-home > a{
-    /* trocar para variável */
-    color: #333faa;
+    color: var(--blue);
 }
 
 .button-sign-up{
@@ -54,4 +82,50 @@ header{
 
 .button-sign-up:hover{
     cursor: pointer;
+}
+.text-sign-up, .icon-sign-up{
+    color: var(--secondary-color);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.find-dream{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.titulo{
+    font-size: 5rem;
+    width: 50%;
+    color: var(--secondary-color);
+    margin: 0;
+    margin-top: auto;
+}
+
+.descricao{
+    color: var(--color-shadow);
+    width: 35%;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.catalog{
+    padding-top: 1.5rem;
+}
+
+.button-catalog{
+    border-radius: var(--border-radius);
+    background: var(--color);
+    border: 0;
+    color: var(--background);
+    padding: 0.8rem 4rem;
+    box-shadow: var(--box-shadow) ;
 }
