@@ -8,22 +8,35 @@
     --background:#f2f2f2;
 
     --color: #111;
+    --color-clear: #ddd;
     --color-shadow: #666;
     --secondary-color: #323232;
-
+    
     --blue:#333faa;
-
+    --blue-green: #009c68;
+    --green: #008a12;
+    --yellow: #ccbe00;
+    --orange: #ff5100;
+    --purple: #b700ff;
+    --dark-purple: #6d00d3;
 }
 
 .dark-mode:root{
-
+    
     --background:#111;
-
+    
     --color: #f2f2f2;
+    --color-clear: #575757;
     --color-shadow: #888;
     --secondary-color: #444;
-
+    
     --blue:#a7c3ff;
+    --blue-green: #64f5c5;
+    --green: #45ff5e;
+    --yellow: #ffd152;
+    --orange: #ff7e42;
+    --purple: #d770ff;
+    --dark-purple: #ad5ff7;
 }
 
 *{
@@ -31,8 +44,12 @@
 }
 
 body{
-    background-image: url('./assets/background.jpg');
+    background-image: linear-gradient(url('./assets/background.jpg') 60%, var(--background) 40%);
     background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
 }
 
 header{
@@ -89,22 +106,21 @@ header{
 
 main{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 73%;
+
 }
 
 .find-dream{
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
     gap: 1rem;
-    padding-top: 1.5rem;
 }
 
 .titulo{
     font-size: 5rem;
-    width: 50%;
+    width: 78%;
     color: var(--secondary-color);
     margin: 0;
     margin-top: auto;
@@ -112,13 +128,14 @@ main{
 
 .descricao{
     color: var(--color-shadow);
-    width: 35%;
+    width: 48%;
     font-size: 1.1rem;
     margin: 0;
 }
 
 .catalog{
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .button-catalog{
@@ -129,3 +146,50 @@ main{
     padding: 0.8rem 4rem;
     box-shadow: var(--box-shadow) ;
 }
+
+footer{
+    width: 73%;
+    display: flex;
+    justify-content: center;
+    background: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 3rem 2rem;
+}
+
+.footer-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.item-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var( --color);
+    flex: 1;
+
+}
+
+.icon-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-clear);
+    border-radius: var(--border-radius);
+    width: 3rem;
+    height: 3rem;
+}
+
+.all{ color: var(--blue); }
+.land-lots{ color: var(--blue-green);}
+.office{ color: var(--green);}
+.store{ color: var(--yellow);}
+.apartment{ color: var(--orange);}
+.villa{ color: var(--purple);}
+.house{ color: var(--dark-purple);}
+
+.all-span{ color: var(--blue) }
