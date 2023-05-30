@@ -21,25 +21,10 @@
     --dark-purple: #6d00d3;
 }
 
-.dark-mode:root{
-    
-    --background:#111;
-    
-    --color: #f2f2f2;
-    --color-clear: #575757;
-    --color-shadow: #888;
-    --secondary-color: #444;
-    
-    --blue:#a7c3ff;
-    --blue-green: #64f5c5;
-    --green: #45ff5e;
-    --yellow: #ffd152;
-    --orange: #ff7e42;
-    --purple: #d770ff;
-    --dark-purple: #ad5ff7;
-}
-
 *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -54,6 +39,7 @@ body {
 }
 
 header{
+    padding-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -96,11 +82,9 @@ header{
     display: flex;
     gap: 0.5rem;
     padding: 1.5rem;
-}
-
-.button-sign-up:hover{
     cursor: pointer;
 }
+
 .text-sign-up, .icon-sign-up{
     color: var(--secondary-color);
 }
@@ -151,7 +135,7 @@ main{
 footer{
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 0 2rem 0 ;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -169,7 +153,7 @@ footer{
     background: var(--background);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    padding: 30px 0;
+    padding: 2rem 0;
 }
 
 .footer-content{
@@ -209,7 +193,23 @@ footer{
 
 .all-span{ color: var(--blue) }
 
-.checkbox{
-    color: var(--color);
-    padding: 0.05rem;
+@media (prefers-color-scheme: dark){
+    :root{
+    
+        --background:#111;
+    
+        --color: #f2f2f2;
+        --color-clear: #575757;
+        --color-shadow: #888;
+        --secondary-color: #444;
+        
+        --blue:#a7c3ff;
+        --blue-green: #64f5c5;
+        --green: #45ff5e;
+        --yellow: #ffd152;
+        --orange: #ff7e42;
+        --purple: #d770ff;
+        --dark-purple: #ad5ff7;
+    
+    }  
 }
