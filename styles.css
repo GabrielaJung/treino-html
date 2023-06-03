@@ -6,6 +6,7 @@
     --box-shadow: 0.05rem 0.05rem 0.25rem -0.1rem var(--secondary-color);
 
     --background:#f2f2f2;
+    --background-shadow: rgba(1, 1, 1, 0.5);
 
     --color: #111;
     --color-clear: #ddd;
@@ -137,6 +138,33 @@ main{
     box-shadow: var(--box-shadow) ;
     cursor: pointer;
 }
+.button-catalog:hover{
+    animation: catalog 300ms ease forwards;
+}
+
+#modal{
+    display: none;
+    position: absolute;
+    background: var(--background-shadow);
+    color: var(--color);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    > .modal-container{
+       display: flex;
+       width: 50rem;
+       height: 40rem;
+       border-radius: var(--border-radius);
+       background: var(--background);
+       box-shadow: var(--box-shadow);
+       position: absolute;
+       z-index: 1;
+    }
+}
+
 
 footer{
     width: 100%;
@@ -226,6 +254,16 @@ footer{
     100%{
         transform: rotateZ(0deg) scale(1);
         transform-style: var(--blue)
+    }
+}
+
+@keyframes catalog{
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.05);
+        background: var(--blue);
     }
 }
 
