@@ -140,8 +140,6 @@ const modal = document.getElementById("modal");
 function CriaElemento (elemento, content = null, atributo = null, valorAtt = null){
     let elemt = document.createElement(elemento);
 
-
-
     if( atributo === null || valorAtt === null ) {
         elemt.textContent = content;
         return elemt
@@ -186,25 +184,13 @@ function ModalCatalog(){
     modal.style.display = "flex";
     modal.innerHTML = ""
 
-    const modalContainer = CriaElemento("div");
-    modalContainer.setAttribute("class", "modal-container");
-    
-    const modalContent = CriaElemento("div");
-    modalContent.setAttribute("class", "modal-content");
-
+    const modalContainer = CriaElemento("div", null, "class", "modal-container");
+    const modalContent = CriaElemento("div", null, "class", "modal-content");
     const header = CriaElemento("header");
-    
-    const botaoFechar = CriaElemento("button");
-    botaoFechar.setAttribute("onClick", "fechaModal()");
-
-    const iconBotaoFechar = CriaElemento("i");
-    iconBotaoFechar.setAttribute("class", "fas fa-times");
-
-    const sectionCards = CriaElemento("section");
-    sectionCards.setAttribute("class", "section-cards");
-
-    const footer = CriaElemento("footer");
-    footer.setAttribute("class", "footer-modal");
+    const botaoFechar = CriaElemento("button", null, "onClick", "fechaModal()");
+    const iconBotaoFechar = CriaElemento("i", null, "class", "fas fa-times");
+    const sectionCards = CriaElemento("section", null, "class", "section-cards");
+    const footer = CriaElemento("footer", null, "class", "footer-modal");
 
     botaoFechar.append(iconBotaoFechar)
     header.append(botaoFechar);
@@ -214,7 +200,6 @@ function ModalCatalog(){
     console.log(modalContainer);
 
     CriaCard()
-
 }
 
 /**
@@ -230,22 +215,17 @@ function CriaCard(){
 
     catalogo.map(item =>{
     
-        const card = CriaElemento("div");
-        card.setAttribute("class", "card");
-    
-        const divImgCard = CriaElemento("div", null, {class: "div-img-card"});
-        divImgCard.setAttribute("class", "div-img-card");
-        
-        const divInfosCard = CriaElemento("div");
-        divInfosCard.setAttribute("class", "div-infos-card");
-        
-        const imgCard = CriaElemento("img");
-        imgCard.setAttribute("src",  item.img)
-    
-        const titulo = CriaElemento("p", item.nome);
+        const card = CriaElemento("div", null, "class", "card");
+        const divImgCard = CriaElemento("div", null, "class", "div-img-card");
+        const divInfosCard = CriaElemento("div", null, "class", "div-infos-card");
+        const imgCard = CriaElemento("img", null, "src",  item.img);
+        const titulo = CriaElemento("strong", item.nome);
+        const descricao = CriaElemento("p", item.descricao);
+        const area = CriaElemento("span", `Área: ${item.area}m²`);
+        const preco = CriaElemento("strong", `R$${item.preco},00`, "class", "preco-catalogo");
     
         divImgCard.append(imgCard)
-        divInfosCard.append(titulo)
+        divInfosCard.append(titulo, descricao, area, preco)
         card.append(divImgCard, divInfosCard);
         sectionCards.append( card);
 
