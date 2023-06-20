@@ -1,92 +1,92 @@
-const catalogo =[
-    {
-        img: "./assets/casa.jpg",
-        nome: "Casa",
-        tipo: "Casa",
-        descricao: "Residência unifamiliar com dois quartos e um jardim.",
-        preco: "250.000", //R$
-        area: "150", //m2
-        quartos: 2,
-        banheiros: 2,
-        garagem: true,
-      },
-      {
-        img: "./assets/prediodeap.jpg",
-        nome: "Prédio de Apartamentos",
-        tipo: "Apartamento",
-        descricao: "Edifício com vários apartamentos residenciais.",
-        preco: "1.500.000", //R$
-        area: "1.000", //m2
-        apartamentos: 20,
-        andares: 5,
-        elevador: true,
-      },
-      {
-        img: "./assets/escritorio.jpg",
-        nome: "Escritório",
-        tipo: "Comercial",
-        descricao: "Espaço comercial para fins de escritório.",
-        preco: "500.000", //R$
-        area: "300", //m2
-        salas: 10,
-        banheiros: 4,
-        estacionamento: true,
-      },
-      {
-        img: "./assets/loja.jpg",
-        nome: "Loja",
-        tipo: "Comercial",
-        descricao: "Espaço comercial para venda de produtos.",
-        preco: "350.000", //R$
-        area: "200", //m2
-        vitrine: true,
-        estoque: "grande",
-      },
-      {
-        img: "./assets/apdeluxo.jpg",
-        nome: "Apartamento de Luxo",
-        tipo: "Apartamento",
-        descricao: "Unidade residencial de alto padrão com vista para o mar.",
-        preco: "2.000.000", //R$
-        area: "250", //m2
-        quartos: 3,
-        banheiros: 3,
-        garagem: true,
-      },
-      {
-        img: "./assets/galpaoindustrial.jpg",
-        nome: "Galpão Industrial",
-        tipo: "Comercial",
-        descricao: "Espaço amplo para fins industriais e de armazenamento.",
-        preco: "800.000", //R$
-        area: "500", //m2
-        escritorios: 2,
-        banheiros: 2,
-        acessoCaminhoes: true,
-      },
-      {
-        img: "./assets/restaurante.jpg",
-        nome: "Restaurante",
-        tipo: "Comercial",
-        descricao: "Estabelecimento gastronômico com área de jantar e cozinha.",
-        preco: "600.000", //R$
-        area: "400", //m2
-        mesas: 20,
-        cozinhas: 2,
-        bar: true,
-      },
-      {
-        img: "./assets/edificiocomercial.jpg",
-        nome: "Edifício Comercial",
-        tipo: "Comercial",
-        descricao: "Prédio com várias lojas e escritórios comerciais.",
-        preco: "1.200.000", //R$
-        area: "800", //m2
-        lojas: 10,
-        escritorios: 8,
-        estacionamento: true,
-      },
-  ];
+const catalogo = [
+  {
+    img: "./assets/casa.jpg",
+    nome: "Casa",
+    tipo: "Casa",
+    descricao: "Residência unifamiliar com dois quartos e um jardim.",
+    preco: "250.000", //R$
+    area: "150", //m2
+    quartos: 2,
+    banheiros: 2,
+    garagem: true,
+  },
+  {
+    img: "./assets/prediodeap.jpg",
+    nome: "Prédio de Apartamentos",
+    tipo: "Apartamento",
+    descricao: "Edifício com vários apartamentos residenciais.",
+    preco: "1.500.000", //R$
+    area: "1.000", //m2
+    apartamentos: 20,
+    andares: 5,
+    elevador: true,
+  },
+  {
+    img: "./assets/escritorio.jpg",
+    nome: "Escritório",
+    tipo: "Comercial",
+    descricao: "Espaço comercial para fins de escritório.",
+    preco: "500.000", //R$
+    area: "300", //m2
+    salas: 10,
+    banheiros: 4,
+    estacionamento: true,
+  },
+  {
+    img: "./assets/loja.jpg",
+    nome: "Loja",
+    tipo: "Comercial",
+    descricao: "Espaço comercial para venda de produtos.",
+    preco: "350.000", //R$
+    area: "200", //m2
+    vitrine: true,
+    estoque: "grande",
+  },
+  {
+    img: "./assets/apdeluxo.jpg",
+    nome: "Apartamento de Luxo",
+    tipo: "Apartamento",
+    descricao: "Unidade residencial de alto padrão com vista para o mar.",
+    preco: "2.000.000", //R$
+    area: "250", //m2
+    quartos: 3,
+    banheiros: 3,
+    garagem: true,
+  },
+  {
+    img: "./assets/galpaoindustrial.jpg",
+    nome: "Galpão Industrial",
+    tipo: "Comercial",
+    descricao: "Espaço amplo para fins industriais e de armazenamento.",
+    preco: "800.000", //R$
+    area: "500", //m2
+    escritorios: 2,
+    banheiros: 2,
+    acessoCaminhoes: true,
+  },
+  {
+    img: "./assets/restaurante.jpg",
+    nome: "Restaurante",
+    tipo: "Comercial",
+    descricao: "Estabelecimento gastronômico com área de jantar e cozinha.",
+    preco: "600.000", //R$
+    area: "400", //m2
+    mesas: 20,
+    cozinhas: 2,
+    bar: true,
+  },
+  {
+    img: "./assets/edificiocomercial.jpg",
+    nome: "Edifício Comercial",
+    tipo: "Comercial",
+    descricao: "Prédio com várias lojas e escritórios comerciais.",
+    preco: "1.200.000", //R$
+    area: "800", //m2
+    lojas: 10,
+    escritorios: 8,
+    estacionamento: true,
+  },
+];
 
 const btnCatalog = document.getElementById("catalog");
 btnCatalog.setAttribute("onClick", "ModalCatalog()");
@@ -137,14 +137,14 @@ const modal = document.getElementById("modal");
  * ```
  * 
 */
-function CriaElemento (elemento, content = null, atributo = null, valorAtt = null){
-    let elemt = document.createElement(elemento);
-    elemt.textContent = content;
+function CriaElemento(elemento, content = null, atributo = null, valorAtt = null) {
+  let elemt = document.createElement(elemento);
+  elemt.textContent = content;
 
-    if( atributo === null || valorAtt === null ) return elemt;
-    
-    elemt.setAttribute(atributo, valorAtt);
-    return elemt
+  if (atributo === null || valorAtt === null) return elemt;
+
+  elemt.setAttribute(atributo, valorAtt);
+  return elemt
 }
 
 /**
@@ -162,9 +162,9 @@ function CriaElemento (elemento, content = null, atributo = null, valorAtt = nul
  *  botaoFechar.setattribute("onClick", "fechaModal()");
  * ``` 
  */
-function fechaModal(){
-    const modal = document.getElementById("modal");
-    modal.style.display = "none"
+function fechaModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none"
 }
 
 /**
@@ -175,34 +175,32 @@ function fechaModal(){
  *  ModalCatalog(props); 
  * ```
  */
-function ModalCatalog(){
-    const modal = document.getElementById("modal");
-    modal.style.display = "flex";
-    modal.innerHTML = ""
+function ModalCatalog() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "flex";
+  modal.innerHTML = ""
 
-    const modalContainer = CriaElemento("div", null, "class", "modal-container");
-    const modalContent = CriaElemento("div", null, "class", "modal-content");
+  const modalContainer = CriaElemento("div", null, "class", "modal-container");
+  const modalContent = CriaElemento("div", null, "class", "modal-content");
 
-    const header = CriaElemento("header");
-    const botaoFechar = CriaElemento("button", null, "onClick", "fechaModal()");
-    const iconBotaoFechar = CriaElemento("i", null, "class", "fas fa-times");
+  const header = CriaElemento("header");
+  const botaoFechar = CriaElemento("button", null, "onClick", "fechaModal()");
+  const iconBotaoFechar = CriaElemento("i", null, "class", "fas fa-times");
 
-    const sectionCards = CriaElemento("section", null, "class", "section-cards");
+  const sectionCards = CriaElemento("section", null, "class", "section-cards");
 
-    const footer = CriaElemento("footer", null, "class", "footer-modal");
-    CriaInsignea()
+  const footer = CriaElemento("footer", null, "class", "footer-modal");
+  CriaInsignea()
 
-    botaoFechar.append(iconBotaoFechar)
-    header.append(botaoFechar);
-    modalContent.append(header, sectionCards, footer);
-    modalContainer.append(modalContent);
-    modal.append(modalContainer);
-    console.log(modalContainer);
+  botaoFechar.append(iconBotaoFechar)
+  header.append(botaoFechar);
+  modalContent.append(header, sectionCards, footer);
+  modalContainer.append(modalContent);
+  modal.append(modalContainer);
+  console.log(modalContainer);
 
-    CriaCard()
+  CriaCard()
 }
-const teste = { casa: 2};
-console.log(teste.getOwnPropertyDescriptor('casa', number))
 
 /**
  * Função que cria cards do catálogo
@@ -211,72 +209,73 @@ console.log(teste.getOwnPropertyDescriptor('casa', number))
  *  CriaCard()
  * ```
  */
-function CriaCard(){
-    const sectionCards = document.querySelector(".section-cards");
-    sectionCards.innerHTML = ""
+function CriaCard() {
+  const sectionCards = document.querySelector(".section-cards");
+  sectionCards.innerHTML = ""
 
-    catalogo.map(item =>{
-    
-        const card = CriaElemento("div", null, "class", "card");
-        const divImgCard = CriaElemento("div", null, "class", "div-img-card");
-        const divInfosCard = CriaElemento("div", null, "class", "div-infos-card");
-        const imgCard = CriaElemento("img", null, "src",  item.img);
-        const titulo = CriaElemento("strong", item.nome);
-        const descricao = CriaElemento("p", item.descricao);
-        const area = CriaElemento("span", `Área: ${item.area}m²`);
-        const preco = CriaElemento("strong", `R$${item.preco},00`, "class", "preco-catalogo");
-    
-        divImgCard.append(imgCard)
-        divInfosCard.append(titulo, descricao, area, preco)
-        card.append(divImgCard, divInfosCard);
-        sectionCards.append( card);
+  catalogo.map(item => {
 
-    })
+    const card = CriaElemento("div", null, "class", "card");
+    const divImgCard = CriaElemento("div", null, "class", "div-img-card");
+    const divInfosCard = CriaElemento("div", null, "class", "div-infos-card");
+    const imgCard = CriaElemento("img", null, "src", item.img);
+    const titulo = CriaElemento("strong", item.nome);
+    const descricao = CriaElemento("p", item.descricao);
+    const area = CriaElemento("span", `Área: ${item.area}m²`);
+    const preco = CriaElemento("strong", `R$${item.preco},00`, "class", "preco-catalogo");
+
+    divImgCard.append(imgCard)
+    divInfosCard.append(titulo, descricao, area, preco)
+    card.append(divImgCard, divInfosCard);
+    sectionCards.append(card);
+
+  })
 }
 
-function CriaInsignea(){
-  // const footer = document.querySelector(".footer-modal");
-  // footer.innerHTML = '';
+function CriaInsignea() {
+  const footer = document.querySelector(".footer-modal");
 
-  const quantia = 1
+  const quantidade = 1
   /* 
     Utilizando o médoto reduce para reduzir informações do catálogo,
     buscando pelo tipo do item, e quantos itens do catálogo possuem o mesmo tipo
 
     Exemplo: { Apartamentos: 2 } --> { tipo: quantidade }
-    [{apartamento, 2}]
+    [{tipo:apartamento, quantidade:2}]
   */
-  const insigneas = catalogo.reduce((index, propriedade) => {
-    const { tipo } = propriedade;
-    if (!!index[tipo]) {
-      console.log('a')
-      index[quantia] += 1;
-      // debugger
-    } else {
-      index[tipo] = {tipo, quantia};
-      const indexTipo = index[tipo]
-      const obj = [{indexTipo, quantia}];
-      Object.entries(obj)
+  const insigneas = Object.entries(
+    //prev, next, index, arr => arguments
+    catalogo.reduce((prev, next) => {
+      const { tipo } = next;
+      if (!!prev[tipo]) {
+        prev[tipo].quantidade += 1;
+      } else {
+        prev[tipo] = { tipo, quantidade };
+      }
 
-    }
-    console.log(Object.entries((index)))
-    return index;
-  }, {});
+      console.log(tipo+ ', '+ quantidade)
+      console.log(prev)
+      return prev;
+    }, {})
+  ).map(([tipo, quantidade]) => {
 
+    console.log(quantidade.quantidade)
+    // footer.innerHTML = '';
+
+    const insignea = CriaElemento("div", null, "class", "insignea");
+    const tipoSpan = CriaElemento("span", tipo)
+
+    return insignea
+  })/*.forEach(insignea => footer.append(...insignea))*/;
+  //foreach dando erro
 
   
-  // insigneas.map(insignea => {
 
-  //   const info = //verificação aqui
-
-  //   const insignea = CriaElemento("div", null, "class", "insignea");
-  //   const tipo = CriaElemento("span", insignea)
+  console.log(insigneas)
+    footer.append(...insigneas);
 
 
-  //   footer.append(insignea);
 
-  // })
-  console.log(insigneas);
 
 }
 
